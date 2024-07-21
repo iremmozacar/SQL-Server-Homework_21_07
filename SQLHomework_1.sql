@@ -3,7 +3,6 @@ go
 
 
 --1)En çok ciro yapılan 3 ürünü listeleyin.
-
 -- SELECT top(3)
 -- p.ProductName as 'Ürün',
 -- CAST(SUM(od.Quantity*od.UnitPrice*(1-od.Discount)) as decimal(18,2)) as 'Ciro'
@@ -12,7 +11,7 @@ go
 -- ORDER by 'Ciro' desc
 
 
---2) Hangi kargo şirketine ne kadarlık ödeme yapılmıştır? 
+--2)Hangi kargo şirketine ne kadarlık ödeme yapılmıştır? 
 -- select 
 -- s.CompanyName as 'Kargo şirketi',
 -- count(*)
@@ -29,7 +28,7 @@ go
 -- order by 'Tutar' ASC
 
 
---4)Hangi müşteriye ne kadarlık sarış yapılmıştır?  Satış tutarına göre büyükten küçüğe sıralı getiriniz.
+--4)Hangi müşteriye ne kadarlık satış yapılmıştır? Satış tutarına göre büyükten küçüğe sıralı getiriniz.
 -- select 
 -- c.CompanyName as 'Şirket adı',
 -- CAST(sum(od.Quantity*od.UnitPrice*(1-od.Discount)) as decimal(18,2)) as 'Tutar'
@@ -39,7 +38,7 @@ go
 
 
 
---5)Bölgelere göre satış tutarlarını listeleyiniz? (region) 5 tabloyu bi araya getir
+--5)Bölgelere göre satış tutarlarını listeleyiniz.
 -- select 
 -- r.RegionDescription as 'Bölge',
 -- CAST(SUM(od.Quantity*od.UnitPrice*(1-od.Discount)) as decimal (18,2)) as 'Tutar'
