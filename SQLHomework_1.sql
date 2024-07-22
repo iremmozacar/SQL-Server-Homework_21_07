@@ -14,7 +14,7 @@ go
 --2)Hangi kargo şirketine ne kadarlık ödeme yapılmıştır? 
 -- select 
 -- s.CompanyName as 'Kargo şirketi',
--- count(*)
+-- SUM(o.freight) as 'Ödeme'
 -- from Orders o join Shippers s on o.ShipVia=s.ShipperID
 -- GROUP by s.CompanyName
 
@@ -22,7 +22,7 @@ go
 --3)En az ödeme yapılmış olan kargo şirketi hangisidir? Ne kadarlık ödeme yapılmıştır? 
 -- SELECT top(1)
 --  s.CompanyName as 'Kargo şirketi',
---  COUNT(*) as 'Tutar'
+--  SUM(o.freight) as 'Tutar'
 --  FROM Orders o join Shippers s on o.ShipVia=s.ShipperID
 -- GROUP BY s.CompanyName
 -- order by 'Tutar' ASC
